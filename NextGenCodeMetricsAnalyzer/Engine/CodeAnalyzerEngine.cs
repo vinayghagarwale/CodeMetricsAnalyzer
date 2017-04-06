@@ -1,5 +1,7 @@
 ﻿using NextGenCodeMetricsAnalyzer.Contract;
+using System.Linq;
 using NextGenCodeMetricsAnalyzer.Model;
+using System;
 namespace NextGenCodeMetricsAnalyzer.Engine
 {
     public  class CodeAnalyzerEngine
@@ -16,6 +18,28 @@ namespace NextGenCodeMetricsAnalyzer.Engine
 
         public void ProcessExcel()
         {
+
+            CodeAnalysisProcessedExcelData excel = new CodeAnalysisProcessedExcelData();
+
+
+            foreach( ExcelRowDataModel excelrow in _lstexcelRowdataModel)
+            {
+                if(excelrow.Scope == "Type")
+                {
+                    
+
+                }
+                else if(excelrow.Scope == "Member")
+                {
+                    CyclometicComplexity cc = new CyclometicComplexity();
+                    cc.Range1 = (Convert.ToInt16(excelrow.CyclomaticComplexity ) < 10) ? 1 : 1;
+
+                    
+
+
+                    excel.CyclomatiComplexityList.Add();
+                }
+            }
 
 
 

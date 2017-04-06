@@ -81,7 +81,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\CodeAnalysisProcessedExcelData.cs" />
     <Compile Include="Model\CodeAnalyzerPreferences.cs" />
+    <Compile Include="Model\CyclometicComplexity.cs" />
     <Compile Include="Model\ExcelRowDataModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
